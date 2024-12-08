@@ -56,20 +56,17 @@ def map_reduce(text, search_words=None):
 def visualize_top_words(words_list, limit = 10):
     sorted_word_counts = dict(sorted(words_list.items(), key=lambda item: item[1], reverse=True))
     sorted_word_counts = dict(list(sorted_word_counts.items())[:limit])
-    # Данные для диаграммы
     words = list(sorted_word_counts.keys())
     counts = list(sorted_word_counts.values())
 
-    # Создание диаграммы
     plt.bar(words, counts)
 
     # Настройки графика
-    plt.title("Количество слов")
+    plt.title("Кількість слів")
     plt.xlabel("Слова")
     plt.ylabel("Частота")
     plt.grid(axis='y', linestyle='--', alpha=0.7)
 
-    # Показ диаграммы
     plt.show()
     pass
 
