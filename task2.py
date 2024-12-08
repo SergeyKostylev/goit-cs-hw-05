@@ -5,9 +5,6 @@ from collections import defaultdict
 import requests
 import matplotlib.pyplot as plt
 
-
-#TODO: requirements
-
 def get_text(url):
     try:
         response = requests.get(url)
